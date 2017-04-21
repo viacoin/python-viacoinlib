@@ -131,15 +131,15 @@ class BaseProxy(object):
         self.__conn = None
 
         if service_url is None:
-            # Figure out the path to the bitcoin.conf file
+            # Figure out the path to the viacoin.conf file
             if btc_conf_file is None:
                 if platform.system() == 'Darwin':
                     btc_conf_file = os.path.expanduser('~/Library/Application Support/Bitcoin/')
                 elif platform.system() == 'Windows':
                     btc_conf_file = os.path.join(os.environ['APPDATA'], 'Bitcoin')
                 else:
-                    btc_conf_file = os.path.expanduser('~/.bitcoin')
-                btc_conf_file = os.path.join(btc_conf_file, 'bitcoin.conf')
+                    btc_conf_file = os.path.expanduser('~/.viacoin')
+                btc_conf_file = os.path.join(btc_conf_file, 'viacoin.conf')
 
             # Extract contents of bitcoin.conf to build service_url
             with open(btc_conf_file, 'r') as fd:
