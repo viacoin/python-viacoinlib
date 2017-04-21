@@ -1,17 +1,17 @@
-# python-bitcoinlib
+# python-viacoinlib
 
-This Python2/3 library provides an easy interface to the bitcoin data
+This Python2/3 library provides an easy interface to the viacoin data
 structures and protocol. The approach is low-level and "ground up", with a
-focus on providing tools to manipulate the internals of how Bitcoin works.
+focus on providing tools to manipulate the internals of how Viacoin works.
 
-"The Swiss Army Knife of the Bitcoin protocol." - Wladimir J. van der Laan
+"The Swiss Army Knife of the Viacoin protocol." - Wladimir J. van der Laan
 
 
 ## Requirements
 
     sudo apt-get install libssl-dev
 
-The RPC interface, bitcoin.rpc, is designed to work with Bitcoin Core v0.13.0
+The RPC interface, viacoin.rpc, is designed to work with Viacoin Core v0.13.0
 Older versions may work but there do exist some incompatibilities.
 
 
@@ -36,8 +36,8 @@ library. Non-consensus critical modules include the following:
     bitcoin.bloom    - Bloom filters (incomplete)
     bitcoin.net      - Network communication (in flux)
     bitcoin.messages - Network messages (in flux)
-    bitcoin.rpc      - Bitcoin Core RPC interface support
-    bitcoin.wallet   - Wallet-related code, currently Bitcoin address and
+    bitcoin.rpc      - Viacoin Core RPC interface support
+    bitcoin.wallet   - Wallet-related code, currently Viacoin address and
                        private key support
 
 Effort has been made to follow the Satoshi source relatively closely, for
@@ -48,16 +48,16 @@ CBlockHeader, nValue etc. Otherwise Python naming conventions are followed.
 
 ## Mutable vs. Immutable objects
 
-Like the Bitcoin Core codebase CTransaction is immutable and
-CMutableTransaction is mutable; unlike the Bitcoin Core codebase this
+Like the Viacoin Core codebase CTransaction is immutable and
+CMutableTransaction is mutable; unlike the Viacoin Core codebase this
 distinction also applies to COutPoint, CTxIn, CTxOut, and CBlock.
 
 
 ## Endianness Gotchas
 
-Rather confusingly Bitcoin Core shows transaction and block hashes as
+Rather confusingly Viacoin Core shows transaction and block hashes as
 little-endian hex rather than the big-endian the rest of the world uses for
-SHA256. python-bitcoinlib provides the convenience functions x() and lx() in
+SHA256. python-viacoinlib provides the convenience functions x() and lx() in
 bitcoin.core to convert from big-endian and little-endian hex to raw bytes to
 accomodate this. In addition see b2x() and b2lx() for conversion from bytes to
 big/little-endian hex.
@@ -93,7 +93,7 @@ the Satoshi codebase.
 
 ## Unit tests
 
-Under bitcoin/tests using test data from Bitcoin Core. To run them:
+Under bitcoin/tests using test data from Viacoin Core. To run them:
 
     python -m unittest discover && python3 -m unittest discover
 
