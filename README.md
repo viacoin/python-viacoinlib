@@ -4,8 +4,7 @@ This Python2/3 library provides an easy interface to the viacoin data
 structures and protocol. The approach is low-level and "ground up", with a
 focus on providing tools to manipulate the internals of how Viacoin works.
 
-"The Swiss Army Knife of the Viacoin protocol." - Wladimir J. van der Laan
-
+"The Swiss Army Knife of the Viacoin protocol."
 
 ## Requirements
 
